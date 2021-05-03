@@ -10,7 +10,7 @@ pipeline {
 	}
 	Stage('Test'){
 	    steps{
-                sh -c 'code/wait.sh server:1234 -- echo READY && node code/client.js'
+                sh 'code/wait.sh server:1234 -- echo READY && node code/client.js'
 	    }
  	}
     }
