@@ -2,13 +2,13 @@ pipeline {
     agent none
 
     stages {
-        Stage('Build'){
+        stage('Build'){
             steps{
 		sh 'docker-compose up'
 
             }
 	}
-	Stage('Test'){
+	stage('Test'){
 	    steps{
                 sh 'code/wait.sh server:1234 -- echo READY && node code/client.js'
 	    }
