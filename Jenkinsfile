@@ -15,6 +15,7 @@ pipeline {
             steps{
 		sh 'docker-compose up'
                 sh 'code/wait.sh server:1234 -- echo READY && node code/client.js'
+            }
  	}
     }
     post {
