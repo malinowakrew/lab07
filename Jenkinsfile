@@ -2,18 +2,14 @@ pipeline {
     agent any
     stages {
         stage('Build'){
-                agent {
-                    docker { image 'node:alpine'
-                      }
-                 }
             steps{
-		sh 'docker-compose up'
+		sh 'ls'
 
             }
 	}
 	stage('Test'){
 	    steps{
-                sh 'code/wait.sh server:1234 -- echo READY && node code/client.js'
+                sh 'ls'
 	    }
  	}
     }
