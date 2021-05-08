@@ -1,8 +1,10 @@
 pipeline {
-    agent any
+    agent {}
     stages {
         stage('Build'){
             steps{
+                sh 'curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
+		sh 'chmod +x /usr/local/bin/docker-compose'
 		sh 'git pull origin master'
 		sh 'docker-compose up -d'
 
