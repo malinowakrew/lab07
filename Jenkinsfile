@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build'){
             steps{
+		sh 'git pull origin master'
 		sh 'docker-compose up -d'
 
             }
