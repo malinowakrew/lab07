@@ -2,7 +2,7 @@ docker run --name jenkins-blueocean --rm --detach --network jenkins --env DOCKER
 
 <?xml version='1.1' encoding='UTF-8'?>
 <user>dwc wd hcjwehcwbechwebc
-  <version>10</version>
+  <version>10</version>qwdewdwe
   <id>admin</id>
   <fullName>admin</fullName>
   <properties>
