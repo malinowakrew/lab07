@@ -20,6 +20,7 @@ stages {
 		sh 'cd client'
 		script {
  			dockerImage = docker.build registry ./client
+			dockerImage = docker.build registry ./client
  		}
 	}
 	   post {
